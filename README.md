@@ -8,7 +8,7 @@
 
 This application will allow a user to be able to create teams and add members to those teams.
 
-##Specifications
+## Specifications
 
 1. Create Unique Team
   * Example Input: Team created
