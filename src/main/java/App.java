@@ -32,17 +32,17 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/teams/:id", (request, response) -> {
+    get("/teams/:id1", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Team team = Team.find(Integer.parseInt(request.params(":id")));
+      Team team = Team.find(Integer.parseInt(request.params(":id1")));
       model.put("title", team);
       model.put("template", "templates/team.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/teams/:id/members/new", (request, response) -> {
+    get("/teams/:id1/members/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      Team team = Team.find(Integer.parseInt(request.params(":id")));
+      Team team = Team.find(Integer.parseInt(request.params(":id1")));
       model.put("title", team);
       model.put("template", "templates/team-member-form.vtl");
       return new ModelAndView(model, layout);
@@ -54,13 +54,27 @@ public class App {
       Team team = Team.find(Integer.parseInt(request.queryParams("teamId")));
 
       String name = request.queryParams("name");
-      Member newMember = new Member(name);
+      String job = request.queryParams("job");
+      String languages = request.queryParams("languages");
+      String from = request.queryParams("from");
+      Member newMember = new Member(name, job, languages, from);
 
       team.addMember(newMember);
 
       model.put("title", team);
       model.put("template", "templates/team-member-success.vtl");
-    return new ModelAndView(model, layout);
-  }, new VelocityTemplateEngine());
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/teams/:id1/members/:id2", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Team team = Team.find(Integer.parseInt(request.params(":id1")));
+      Member member = Member.find(Integer.parseInt(request.params(":id2")));
+      model.put("name", member);
+      model.put("title", team);
+      model.put("member", Member.all());
+      model.put("template", "templates/team-member.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }

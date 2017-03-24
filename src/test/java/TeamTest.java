@@ -54,7 +54,7 @@ public class TeamTest {
   @Test
   public void addMember_addsMemberToList_true() {
     Team myTeam = new Team("Cobras");
-    Member myMember = new Member("Jeff");
+    Member myMember = new Member("Jeff", "Oracle", "Java, Javascript", "SLO");
     myTeam.addMember(myMember);
     assertEquals(true, myTeam.getMembers().contains(myMember));
   }
