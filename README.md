@@ -24,17 +24,17 @@ This application will allow a user to be able to create teams and add members to
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+  * Open github.com on a computer
+  * Insert https://github.com/seacamjen/startup-team into the url
+  * Clone the repository
+  * Run the command 'gradle run'
+  * Open browser and go to localhost:4567
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+This is a page that can be accessed as long as you have a web browser. You will need to be able to copy this file from GITHUB. Gradle must be used inorder to compile.
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+There are no known bugs. If any are found please see contact details.
 
 ## Support and contact details
 

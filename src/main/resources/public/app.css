@@ -16,3 +16,21 @@
 .panel-body h4 h5 {
   text-align: center;
 }
+
+.event-info {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+a:hover {
+  color: green;
+}
+
+a {
+  font-size: 20px;
+}
+
+#event-information {
+  text-align: center;
+}
