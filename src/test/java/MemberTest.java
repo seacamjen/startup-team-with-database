@@ -17,4 +17,19 @@ public class MemberTest {
     Member myMember = new Member("Jeff");
     assertEquals("Jeff", myMember.getName());
   }
+
+  @Test
+  public void all_returnsAllInstancesOfMembers_true() {
+    Member firstMember = new Member("Jeff");
+    Member secondMember = new Member("Charlie");
+    assertEquals(true, Member.all().contains(firstMember));
+    assertEquals(true, Member.all().contains(secondMember));
+  }
+
+  @Test
+  public void clearList_emptiesAllMembersFromArrayList_0() {
+    Member myMember = new Member("Jeff");
+    Member.clearList();
+    assertEquals(0, Member.all().size());
+  }
 }
