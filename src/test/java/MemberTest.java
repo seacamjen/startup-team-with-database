@@ -39,4 +39,11 @@ public class MemberTest {
     Member myMember = new Member("Jeff");
     assertEquals(1, myMember.getId());
   }
+
+  @Test
+  public void find_returnMemberWithSameId_secondMember() {
+    Member firstMember = new Member("Jeff");
+    Member secondMember = new Member("Charlie");
+    assertEquals(secondMember, Member.find(secondMember.getId()));
+  }
 }
