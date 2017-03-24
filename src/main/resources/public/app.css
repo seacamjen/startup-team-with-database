@@ -1,0 +1,18 @@
+.header-top {
+  background-color: #94DBF2;
+  font-size: 60px;
+  box-shadow: 15px 15px 15px gray;
+  text-align: center;
+}
+
+.panel-body h3 {
+  text-align: center;
+}
+
+.panel-title {
+ text-align: center;
+}
+
+.panel-body h4 h5 {
+  text-align: center;
+}

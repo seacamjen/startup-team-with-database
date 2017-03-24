@@ -1,13 +1,22 @@
 <!--team.vtl-->
-<h2>$title.getTitle() Team Members:</h2>
-<br>
-<ul>
-  #foreach($member in $title.getMembers())
-  <li><a href="/teams/$title.getId()/members/$member.getId()">$member.getName()</a></li>
-  #end
-</ul>
-<br>
-<a href="/teams/$title.getId()/members/new">Add Team Member</a>
-<br>
-<a href="/">View Teams</a>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3>$title.getTitle() Team Members:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          #foreach($member in $title.getMembers())
+          <li><a href="/teams/$title.getId()/members/$member.getId()">$member.getName()</a></li>
+          #end
+        </ul>
+        <br>
+        <a href="/teams/$title.getId()/members/new">Add Team Member</a>
+        <br>
+        <a href="/">View Teams</a>
+      </div>
+    </div>
+  </div>
+</div>
 <!--team.vtl-->
